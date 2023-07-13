@@ -167,6 +167,7 @@ while true; do
         "$STATE_1")
             echo "Currently in $STATE_1"
             start_faultclient
+	    rosrun server_ur5 server2
             start_amcl_launch
             echo "Transitioning from $STATE_1 to $STATE_2"
             current_state=$STATE_2
