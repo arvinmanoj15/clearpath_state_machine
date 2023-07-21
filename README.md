@@ -22,39 +22,40 @@ State Descriptions
     FAULT::FREEZE
 
 # Files and Functions
-"start_faultclient"
+
+'start_faultclient'
 
 This function starts the rosrun server_ur5 fault node responsible for fault detection. It creates a file to store the output of the fault node and saves its process ID (PID) for later termination.
 
-"stop_faultclient"
+'stop_faultclient'
 
 This function stops the rosrun server_ur5 fault node by killing its process using its PID.
 
-"start_amcl_launch"
+'start_amcl_launch'
 
 This function launches the amcl_demo.launch file from the ridgeback_navigation package, which initializes the AMCL (Adaptive Monte Carlo Localization) for the Ridgeback robot. It also runs a node to publish reference height for the UR5 robotic arm.
 
-"stop_amcl_launch"
+'stop_amcl_launch'
 
 This function stops the AMCL launch by killing its process using its PID.
 
-"check_interrupt"
+'check_interrupt'
 
 This function checks for a specific condition (UR5 STOPPED!) in the output file of the fault detection node. If the condition is detected, it returns the FAULT::FREEZE state, otherwise, it returns an empty string.
 
-"start_conversion_of_orientation"
+'start_conversion_of_orientation'
 
 This function starts the rosrun vision conversion_of_orientation node, which performs coordinate conversion for the robot's orientation.
 
-"stop_conversion_of_orientation"
+'stop_conversion_of_orientation'
 
 This function stops the coordinate conversion node by killing its process using its PID.
 
-"invoke_camera_and_navigation"
+'invoke_camera_and_navigation'
 
 This function runs the rosrun vision ridgeback_vision node for camera vision and the rosrun rgb_nav simple_nav node for simple navigation of the robot. It also runs a node to get coordinates for Z adjustment in UR5 server3.
 
-"stop_reference_height_node"
+'stop_reference_height_node'
 
 This function stops the node responsible for providing reference height to the UR5 robotic arm.
 
