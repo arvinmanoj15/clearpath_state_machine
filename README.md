@@ -80,9 +80,9 @@ If a fault is detected at any stage, the state transitions directly to FAULT::FR
 
     Ensure that you have the required ROS packages and nodes installed and properly configured.
 
-    Make sure to grant execute permission to the main.sh script if needed: chmod +x main.sh
+    Make sure to grant execute permission to the state_machine.sh script if needed: chmod +x state_machine.sh
 
-    Run the script using the following command: ./main.sh
+    Run the script using the following command: ./state_machine.sh
 
     Follow the on-screen instructions to proceed or terminate the program when prompted.
 
